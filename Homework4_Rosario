@@ -1,0 +1,42 @@
+# Rosario Cecilio-Flores-Elie - Computational Methods- Homework 4 - Exercise 6.16: The Lagrange Point
+#a-show that the distance r from the center of Earth to the L1 point satisfies 
+import numpy as np
+import astropy
+from astropy import constants as const
+
+#set the constants and values of parameter we are looking
+G=6.6743e-11
+M= 5.972167867791379e24
+m=7.348e22
+R=3.844e8 #Earth-Moon distance
+omega=2.662e-6
+
+#Defining Equation and Derivative
+
+#equation - circular orbit
+def f(r):
+    result=(G*M/r**2)-(G*m/(R-r)**2)-(omega**2)*r
+    return result
+
+#derivative of equation of circular orbit
+def df(r):
+    result= (-2*G*M/r**3)-(2*G*m/(R-r)**3)-(omega**2)
+    return result
+
+#Newton's Method
+n=1000 #iterations
+acc=1e-6 #accuracy
+r=R/2 #initial starting point
+
+for i in range(n+1):
+    delta_r=-f(r)/df(r) #newton's method
+    r=r+delta_r #value considering newton's method
+    if abs(delta_r) <= acc:
+        break
+
+#output
+if i>= n:
+    print ('Maximum of iterations reached')
+
+else:
+    print(f'The Lagrange point between the center of earth and L1 is r= {r} m')
