@@ -18,7 +18,7 @@ charges = [(-1,(5,0)), (1,(-5,0))] #charge 1 and 2 with distance from origin
 # Calculating the potential due to charges.
 for charge in charges: 
     ev = potential(*charge, x=X, y=Y)
-    V +=ev
+    V=ev
     print(V)
 
 #Plot for Electric Potential
