@@ -1,4 +1,4 @@
-#Exercise 10.8 - Calcuate a value for the integral
+#Exercise 10.8 - Calcuate a valuee for the integral
 
 import numpy as np
 from scipy import integrate
