@@ -1,4 +1,4 @@
-#Exercise 10.8 - Calcuate a valye for the integral
+#Exercise 10.8 - Calcuate a value for the integral
 
 import numpy as np
 from scipy import integrate
@@ -13,7 +13,6 @@ def w(x):
     return 0.5/np.sqrt(x)
 
 def inv(x):
-    #probability distribution
     return 1/2*np.sqrt(x)
 
 rng=np.random.default_rng()
