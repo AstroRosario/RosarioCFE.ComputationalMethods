@@ -54,6 +54,6 @@ z_0=[i for i in y_0 if i>0]
 plt.plot(x_0[:len(z_0)], z_0, color="black", label='No air resistance')
 plt.xlabel('Y(m)')
 plt.ylabel('Y(m)')
-plt.title('Displacement of a Cannonball with Different Maasses')
+plt.title('Displacement of a Cannonball with Different Masses')
 plt.legend(fontsize='small')
 plt.show()
