@@ -13,7 +13,7 @@ from numpy import arange
 
 a=0.0
 b=3.0
-N=10
+N=100
 x=np.linspace(a,b,N) #number of points in number of slices 
 
 #defining trapezoid rule
@@ -32,8 +32,10 @@ for i in range(N):
     E[i] = trapezoid(a,x[i])
 
 #plotting a graph
-plt.figure(figsize=(6,3))
-plt.plot(x,E, color='green')
+#plt.figure(figsize=(6,3))
+plt.plot(x,E, color='purple')
+plt.xlabel('x')
+plt.ylabel('E(x)')
 plt.title('E(x) vs. x')
 plt.xlim(x[0],x[-1])
 plt.show()
