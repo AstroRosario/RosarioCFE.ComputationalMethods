@@ -35,8 +35,8 @@ plt.show()
 Ey, Ex= np.gradient(V,x,y)
 #print(Ey,Ex)
 
+#plotting the electric field 
 fig, ax=plt.subplots(figsize=(6,6))
-
 ax.streamplot(X,Y,Ex,Ey)
 ax.set_aspect('equal')
 ax.plot(-5,0,'-or')
